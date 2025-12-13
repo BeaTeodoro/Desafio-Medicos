@@ -93,9 +93,9 @@ npm run dev
 
 ## 👩‍💻 Autora
 
-Beatriz Teodoro  
-Desenvolvedora Full Stack em formação, com foco em React, interfaces modernas e boas práticas de desenvolvimento.
-
+Beatriz Teodoro
+Desenvolvedora Full Stack | UX Minimalista
+[🌐 LinkedIn](https://www.linkedin.com/in/beatrizateodoro) • [💻 GitHub](https://github.com/BeaTeodoro)
 Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos técnicos e demonstrar competências aplicáveis ao mercado de tecnologia.
 
 ---
@@ -103,3 +103,9 @@ Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos técnic
 ## 📄 Licença
 
 Projeto de uso educacional e demonstrativo, criado para fins de portfólio profissional.
+
+---
+
+<p align="center"> Feito com dedicação e café ☕ • 2025 </p> 
+
+
