@@ -4,7 +4,7 @@ Aplicação frontend desenvolvida com **React + Vite**, focada na construção d
 
 Este projeto faz parte do meu **portfólio profissional**, com o objetivo de demonstrar habilidades técnicas em **desenvolvimento frontend**, **componentização**, **organização de código** e **boas práticas de mercado**.
 
-🔗 **Acesse o projeto:** https://desafio-medicos-git-main-beatriz-teodoros-projects.vercel.app
+🔗 **Acesse o projeto:** https://desafio-medicos.vercel.app
 
 ---
 
