@@ -1,0 +1,349 @@
+/* Container padrão */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Página */
+.page {
+  background: var(--bg);
+  color: #071422;
+  font-family: "Inter", sans-serif;
+}
+
+/* seção hero */
+.hero {
+  padding: 5rem 0 6rem;
+}
+
+/* linha da hero */
+.heroRow {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* coluna esquerda */
+.heroLeft {
+  text-align: left;
+  flex: 0 1 56%;
+  max-width: 56%;
+  color: var(--muted);
+}
+
+/* badge responsiva */
+.badgeImg {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 48px;
+}
+
+/* título principal */
+.title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  line-height: 1.05;
+  color: var(--muted);
+  text-shadow: 0px 3px 6px rgba(0,0,0,0.08);
+}
+
+/* texto de apoio */
+.lead {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 0 1.75rem 0;
+}
+
+/* botões */
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ctaPrimary {
+  background: var(--primary);
+  color: #fff;
+  padding: .75rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaOutline {
+  border: 2px solid var(--primary);
+  padding: .65rem 1.4rem;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* coluna direita */
+.heroRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 40%;
+  max-width: 40%;
+}
+
+/* imagem do médico */
+.medicoImg {
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* seção missão */
+.missao {
+  background: var(--primary);
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* título missão */
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.15;
+}
+
+/* subtítulo missão */
+.sectionLead {
+  font-size: 1.15rem;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.95);
+}
+
+/* flex dos cards missão */
+.missaoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* card missão */
+.missaoCard {
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 2.6rem 2rem;
+  border-radius: 14px;
+  text-align: center;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.55;
+  background: transparent;
+}
+
+.missaoCard h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.missaoCard p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.95);
+}
+
+/* desktop = 3 colunas */
+@media (min-width: 1100px) {
+  .missaoCards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.8rem;
+  }
+
+  .missaoCard {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* seção impacto */
+.impacto {
+  padding: 4rem 0;
+  text-align: center;
+  background: #fff;
+}
+
+/* título impacto */
+.sectionTitleDark {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+/* subtítulo impacto */
+.sectionLeadDark {
+  font-size: 1.15rem;
+  margin: 0 auto 3.5rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* flex indicadores */
+.impactCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* card indicador */
+.impactCard {
+  background: #fff;
+  border: 1px solid #e7eaec;
+  border-radius: 12px;
+  padding: 1.6rem;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.impactNumber {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: .6rem;
+}
+
+/* desktop = 4 colunas */
+@media (min-width: 1100px) {
+  .impactCards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .impactCard {
+    flex: 1 1 0;
+    padding: 2.4rem;
+    min-height: 160px;
+  }
+
+  .impactNumber {
+    font-size: 2.4rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 900px) {
+  .heroRow {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  /* esconde imagem do médico no mobile */
+  .heroRight {
+    display: none;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  /* empilha botões no mobile */
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.9rem;
+  }
+
+  .ctaPrimary,
+  .ctaOutline {
+    width: 100%;
+    padding: 1rem 0;
+    justify-content: center;
+  }
+
+  .missaoCards { gap: 1.2rem; }
+  .missaoCard { min-height: auto; padding: 1.6rem; }
+  .impactCards { gap: 1rem; }
+  .impactCard { padding: 1.2rem; min-height: 120px; }
+  .impactNumber { font-size: 1.6rem; }
+}
+
+/* ======================================================
+   OTIMIZAÇÕES VISUAIS (ADICIONADAS — NÃO ALTERAM ESTRUTURA)
+====================================================== */
+
+/* animação suave de entrada */
+.hero,
+.missao,
+.impacto {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* hover nos botões */
+.ctaPrimary,
+.ctaOutline {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ctaPrimary:hover,
+.ctaOutline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+/* efeito na imagem do médico */
+.medicoImg {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.medicoImg:hover {
+  transform: scale(1.04);
+  box-shadow: 0 22px 48px rgba(0,0,0,0.14);
+}
+
+/* hover nos cards da missão */
+.missaoCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.missaoCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.18);
+}
+
+/* hover nos cards de impacto */
+.impactCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impactCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.14);
+}
