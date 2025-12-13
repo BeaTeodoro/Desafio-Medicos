@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import * as S from "./header.module.scss";
 
-/* Header com menu responsivo (hamburguer no mobile) */
+/* Header com menu responsivo */
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -28,7 +28,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* botão hamburguer (mobile) */}
+        {/* botão menu mobile (simplificado) */}
         <button
           className={S.hamburger}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
@@ -36,13 +36,13 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           type="button"
         >
-          <span className={open ? S.barTopActive : S.barTop} />
-          <span className={open ? S.barMidActive : S.barMid} />
-          <span className={open ? S.barBotActive : S.barBot} />
+          <span />
+          <span />
+          <span />
         </button>
       </header>
 
-      {/* menu mobile (aparece no fluxo, sem position) */}
+      {/* menu mobile */}
       {open && (
         <div className={S.mobileMenu}>
           <Link to="/" className={S.mobileLink} onClick={() => setOpen(false)}>

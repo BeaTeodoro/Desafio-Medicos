@@ -1,9 +1,8 @@
-import S from "./sejaVoluntario.module.scss";
+import * as S from "./sejaVoluntario.module.scss";
 
 export default function Voluntario() {
   return (
     <main className={S.page}>
-
       {/* título principal */}
       <section className={S.headerSection}>
         <h1 className={S.title}>Seja Voluntário</h1>
@@ -33,7 +32,6 @@ export default function Voluntario() {
       {/* formulário */}
       <section className={S.formWrapper}>
         <form className={S.form}>
-
           <h2 className={S.formTitle}>Inscrição para Voluntários</h2>
 
           <div className={S.groupTitle}>Dados Pessoais</div>
@@ -47,10 +45,7 @@ export default function Voluntario() {
 
           <div className={S.groupTitle}>Mensagem Adicional</div>
 
-          <textarea
-            placeholder="Conte-nos porque você quer ser voluntário..."
-            className={S.textarea}
-          />
+          <textarea placeholder="Conte-nos porque você quer ser voluntário..." />
 
           <p className={S.infoText}>
             Entraremos em contato para mais informações
@@ -59,10 +54,8 @@ export default function Voluntario() {
           <button type="submit" className={S.submitBtn}>
             Enviar Inscrição
           </button>
-
         </form>
       </section>
-
     </main>
   );
 }

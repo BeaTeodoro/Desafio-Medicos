@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Medico from "../../assets/medico.png";
 import Saude from "../../assets/saude.png";
-import S from "./home.module.scss";
+import * as S from "./home.module.scss";
 
 /* Cards da seção Nossa Missão */
 const missionCards = [
@@ -33,23 +33,23 @@ const impactCards = [
 export default function Home() {
   return (
     <main className={S.page}>
-
       {/* seção hero */}
       <section className={S.hero}>
         <div className={S.container}>
           <div className={S.heroRow}>
-
             {/* coluna esquerda */}
             <div className={S.heroLeft}>
-              <div className={S.badge}>
-                <img src={Saude} alt="Saúde para todos" className={S.badgeImg} />
-              </div>
+              <img
+                src={Saude}
+                alt="Saúde para todos"
+                className={S.badgeImg}
+              />
 
               <h1 className={S.title}>Saúde e cuidado sem barreiras</h1>
 
               <p className={S.lead}>
-                Um projeto dedicado a oferecer atendimento médico e odontológico gratuito
-                para pessoas que mais precisam em nossa comunidade.
+                Um projeto dedicado a oferecer atendimento médico e odontológico
+                gratuito para pessoas que mais precisam em nossa comunidade.
               </p>
 
               {/* botões */}
@@ -66,9 +66,12 @@ export default function Home() {
 
             {/* coluna direita */}
             <div className={S.heroRight}>
-              <img src={Medico} alt="Médico voluntário" className={S.medicoImg} />
+              <img
+                src={Medico}
+                alt="Médico voluntário"
+                className={S.medicoImg}
+              />
             </div>
-
           </div>
         </div>
       </section>
@@ -76,7 +79,6 @@ export default function Home() {
       {/* seção nossa missão */}
       <section className={S.missao}>
         <div className={S.container}>
-
           <h2 className={S.sectionTitle}>Nossa Missão</h2>
 
           <p className={S.sectionLead}>
@@ -91,14 +93,12 @@ export default function Home() {
               </article>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* seção nosso impacto */}
       <section className={S.impacto}>
         <div className={S.container}>
-
           <h2 className={S.sectionTitleDark}>Nosso Impacto</h2>
 
           <p className={S.sectionLeadDark}>
@@ -113,13 +113,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* âncora do botão Como Ajudar */}
       <div id="como-ajudar" />
-
     </main>
   );
 }

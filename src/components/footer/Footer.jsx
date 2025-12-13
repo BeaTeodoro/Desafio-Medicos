@@ -1,5 +1,5 @@
 import Logo from "../../assets/logo.png";
-import S from "./footer.module.scss";
+import * as S from "./footer.module.scss";
 
 // Ícones — SVG inline para manter cor e tamanho perfeitos
 const IconMail = () => (
