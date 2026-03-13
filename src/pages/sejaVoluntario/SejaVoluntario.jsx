@@ -1,8 +1,55 @@
+import { useState } from "react";
 import * as S from "./sejaVoluntario.module.scss";
 
 export default function Voluntario() {
+
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [mensagem, setMensagem] = useState("");
+
+  async function enviarFormulario(e) {
+    e.preventDefault();
+
+    const dados = {
+      nome,
+      email,
+      telefone,
+      mensagem
+    };
+
+    try {
+      const resposta = await fetch("https://api-voluntarios.onrender.com/cadastros", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+      });
+
+      const resultado = await resposta.json();
+
+      if (!resposta.ok) {
+        alert(resultado.erro);
+        return;
+      }
+
+      alert("Inscrição enviada com sucesso!");
+
+      setNome("");
+      setEmail("");
+      setTelefone("");
+      setMensagem("");
+
+    } catch (erro) {
+      console.error(erro);
+      alert("Erro ao conectar com o servidor.");
+    }
+  }
+
   return (
     <main className={S.page}>
+
       {/* título principal */}
       <section className={S.headerSection}>
         <h1 className={S.title}>Seja Voluntário</h1>
@@ -11,7 +58,7 @@ export default function Voluntario() {
         </p>
       </section>
 
-      {/* cards de impacto */}
+      {/* cards */}
       <section className={S.cardsSection}>
         <div className={S.card}>
           <h3>Impacto Direto</h3>
@@ -31,21 +78,45 @@ export default function Voluntario() {
 
       {/* formulário */}
       <section className={S.formWrapper}>
-        <form className={S.form}>
+        <form className={S.form} onSubmit={enviarFormulario}>
+
           <h2 className={S.formTitle}>Inscrição para Voluntários</h2>
 
           <div className={S.groupTitle}>Dados Pessoais</div>
 
           <div className={S.row}>
-            <input type="text" placeholder="Seu Nome *" />
-            <input type="email" placeholder="Seu Email *" />
+
+            <input
+              type="text"
+              placeholder="Seu Nome *"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+            />
+
+            <input
+              type="email"
+              placeholder="Seu Email *"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
           </div>
 
-          <input type="text" placeholder="Seu Telefone *" className={S.full} />
+          <input
+            type="text"
+            placeholder="Seu Telefone *"
+            className={S.full}
+            value={telefone}
+            onChange={(e) => setTelefone(e.target.value)}
+          />
 
           <div className={S.groupTitle}>Mensagem Adicional</div>
 
-          <textarea placeholder="Conte-nos porque você quer ser voluntário..." />
+          <textarea
+            placeholder="Conte-nos porque você quer ser voluntário..."
+            value={mensagem}
+            onChange={(e) => setMensagem(e.target.value)}
+          />
 
           <p className={S.infoText}>
             Entraremos em contato para mais informações
@@ -54,8 +125,10 @@ export default function Voluntario() {
           <button type="submit" className={S.submitBtn}>
             Enviar Inscrição
           </button>
+
         </form>
       </section>
+
     </main>
   );
 }
